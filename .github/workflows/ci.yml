@@ -6,13 +6,14 @@ on:
       - main
 
 jobs:
-  test:
+  test-html:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Run test script
-      run: |
-        echo "Running tests..."
-        ls
+      - name: Check HTML Files
+        run: |
+          echo "Checking HTML files..."
+          ls *.html
